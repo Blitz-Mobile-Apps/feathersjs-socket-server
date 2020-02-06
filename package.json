@@ -1,6 +1,6 @@
 {
   "name": "feathers-socket-server",
-  "description": "Simple server for rest-socket functionality",
+  "description": "Simple server for realtime socket functionality",
   "version": "0.0.0",
   "homepage": "",
   "main": "src",
