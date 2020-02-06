@@ -51,7 +51,7 @@ module.exports = class {
           payload: data.payload,
           connection: params.connection ? params.connection : undefined
         };
-        this.emit(payload.event, payload);
+        this.emit(data.target_event, payload);
         return payload;
         return Promise.resolve("Successfully emitted to selected user.");
       }

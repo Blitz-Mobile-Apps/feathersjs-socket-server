@@ -218,7 +218,8 @@
       console.log("Broadcast: ", data)
     })
 
-    document.getElementById("broadcastEmit").onclick = () => {
+    document.getElementById("broadcastEmit").onclick = (e) => {
+      e.preventDefault()
       socket.emit("create", "myService", {
         channel: "users",
         type: "Broadcast",
@@ -227,7 +228,8 @@
       })
     }
 
-    document.getElementById("sendEmit").onclick = () => {
+    document.getElementById("sendEmit").onclick = (e) => {
+      e.preventDefault()
       let target_user_id = document.getElementById("targetUser").value;
       target_user_id = Number(target_user_id)
       console.log(`Emitting event to ${target_user_id}`);
